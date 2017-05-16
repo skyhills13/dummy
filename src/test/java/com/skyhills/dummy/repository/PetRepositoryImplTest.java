@@ -19,7 +19,7 @@ import java.util.List;
  */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(classes = DummyApplication.class)
-public class PetRepositoryCustomImplTest {
+public class PetRepositoryImplTest {
     Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
