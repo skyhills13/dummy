@@ -1,7 +1,9 @@
 package com.skyhills.dummy.repository;
 
 import com.skyhills.dummy.DummyApplication;
+import com.skyhills.dummy.domain.Pet;
 import com.skyhills.dummy.domain.dto.PetResponse;
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.slf4j.Logger;
@@ -23,6 +25,12 @@ public class PetRepositoryCustomImplTest {
     @Autowired
     private PetRepository petRepository;
 
+    @Before
+    public void before(){
+        petRepository.save(new Pet("aaa", "address1", 100, 200));
+        petRepository.save(new Pet("aaa", "address2", 100, 200));
+        petRepository.save(new Pet("bbb", "address3", 100, 200));
+    }
     @Test
     public void findByPetName() throws Exception {
         List<PetResponse> petList  = petRepository.findByPetName("aaa");

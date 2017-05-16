@@ -17,6 +17,15 @@ public class Pet {
     private Integer weight;
     private Integer height;
 
+    public Pet(){}
+
+    public Pet(String petName, String address, Integer weight, Integer height){
+        this.petName = petName;
+        this.address = address;
+        this.weight = weight;
+        this.height = height;
+    }
+
     public Long getPetId() {
         return petId;
     }
